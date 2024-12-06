@@ -463,7 +463,7 @@ namespace DuetHttpClient.Connector
                     // Wait a moment before attempting to reconnect
                     try
                     {
-                        await Task.Delay(2000, _terminateSession.Token);
+                        await Task.Delay(Options.UpdateInterval, _terminateSession.Token);
                     }
                     catch (OperationCanceledException)
                     {
